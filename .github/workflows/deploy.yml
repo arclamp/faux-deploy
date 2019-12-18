@@ -1,0 +1,10 @@
+name: Deploy application
+on: repository_dispatch
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello
+        run: echo "hello, world"
