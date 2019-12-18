@@ -1,5 +1,5 @@
 name: Deploy application
-on: repository_dispatch
+on: [repository_dispatch, push]
 
 jobs:
   deploy:
@@ -8,3 +8,5 @@ jobs:
     steps:
       - name: Hello
         run: echo "hello, world"
+      - name: Dump event
+        run: jq . $GITHUB_EVENT_PATH
