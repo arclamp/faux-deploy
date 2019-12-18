@@ -9,4 +9,4 @@ jobs:
       - name: Hello
         run: echo "hello, world"
       - name: Dump event
-        run: echo {{github.event}}
+        run: jq . $GITHUB_EVENT_PATH
